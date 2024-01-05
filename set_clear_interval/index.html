@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>walid is learning JS</h1>
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <script>
+    // setInterval(function(){
+    //   console.log("walid");
+    // }, 1000);
+    const sayName = function(str){
+      console.log( str + ' I am walid' );
+    }; // getting a third parameter
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+    start.addEventListener('click', () => {
+      // let start_interval = setInterval(sayName,1000,"hey");
+    });
+    stop.addEventListener('click', ()=>{
+      let stop_interval = clearInterval(start_interval);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>walid er is learning js</h1>
+  <button>click me</button>
+  <!-- link of js is here -->
+  <script>
+    setTimeout(function(){
+      console.log("I am walid sarker");
+    }, 1000);
+    // it runs once and 1st parameter is (handler, which is nothing but a call back function )
+    const sayMyName = function(){
+      console.log("i am walid");
+    };
+    setTimeout( sayMyName ,1000);
+    // it runs once and 1st parameter is (handler, which is nothing but a call back function ) in here we have to  give reference if i execute this function it will not work
+
+    //now we have to know the work of clearTimeout (it needes reference of a work that is why we have to save that work in a variable) 
+    const sayname = setTimeout( sayMyName ,3000); // eventhough i have stored it in a variable, it will execute itself
+    const button = document.querySelector('button');
+    button.addEventListener('click', () => {
+      clearTimeout(sayMyName);
+      console.log('stop');
+    });
+  </script>
+</body>
+</html>

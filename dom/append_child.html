@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #212121;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <ul class="langauage">
+    <li>JavaScript</li>
+  </ul>
+  <script>
+    function add_langauage_name(langauage_name){
+      const li = document.createElement("li");
+      li.innerText = `${langauage_name}`;
+      const ul = document.querySelector(".langauage");
+      ul.appendChild(li);
+    };
+    ;
+    add_langauage_name("Python");
+    //new function is here
+    function add_opti_langauage(langauage){
+      const li = document.createElement("li");
+      const ul = document.querySelector(".langauage");
+      const txt_node = document.createTextNode(langauage);
+      li.appendChild(txt_node);
+      ul.appendChild(li);
+    };
+    add_opti_langauage("javaSQL");
+    //edit
+    const li_tag_second = document.querySelector("li:nth-child(2)");
+    const li = document.createElement("li"); 
+    li.innerText = "MongoDB";
+    li_tag_second.replaceWith(li); 
+    //edit f
+    const second_li = document.querySelector("li:nth-child(1)");
+    const new_li = document.createElement("li");
+    new_li.textContent = "WalidEr_PY";
+    second_li.replaceWith(new_li);
+    //remove;
+    const last_langauage = document.querySelector("li:last-child");
+    last_langauage.remove();
+  </script>
+</body> 
+</html>

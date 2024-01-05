@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- link of js is here -->
+  <script>
+    /*
+    0 => unsent => user has created but hasn't called anything (line : 18)
+    1 => open => resquest has been delevered but (just) (line : 20)
+    2 => HEADERS_RECIEVE => HEADERS RECIEVED but status are not 
+    3 => loading => holds partical data
+    4 => done => oparation is complete
+     */
+    const xml = new XMLHttpRequest(); // with the help of it i can send or recieve data 
+    const reqURL = 'https://api.github.com/users/waliderprint69';
+    xml.open("GET", reqURL); // it has 2 parameters (1. method => "type") (2. string)
+    xml.onreadystatechange = function(){
+      // console.log(xml.readyState); //this is not a method
+      if(xml.readyState === 4){
+        // const data = this.responseText;
+        const data = JSON.parse(this.responseText);
+        console.log(data["followers"]); // will not work because that is a JSON info thats why we have to change it into object by JSON.parse
+      };
+    };
+    xml.send(); 
+  </script>
+</body>  
+</html>
