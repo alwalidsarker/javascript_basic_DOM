@@ -17,7 +17,7 @@ document.getElementsByClassName();
 
 
 const val_one = document.querySelector("#main").textContent;
-//innerContent works on visible or invisible html elements as like if I set (display:none) at an attribute it will be showing the right one through innerContent
+//textContent works on visible or invisible html elements as like if I set (display:none) at an attribute it will be showing the right one through textContent
 const val_two = document.querySelector("#main").innerText;
 //innerText works on visible html elements as like if I set (display:none) at an attribute it will not be showing the right one through innerText
 const val_three = document.querySelector("#main").innerHTML;
@@ -84,7 +84,3 @@ one.addEventListener("click",(e) => {
 // i have to study (type,timeStamp, defaultPrevent,target, toElement, srcElement, currentTarget, clientX, clientY, screenX,screenY, altKey, ctrlKey, keyCode, shiftKey)
 // false = bubble
 //true = capturing
-
-
-
-
